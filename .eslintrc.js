@@ -1,0 +1,200 @@
+"use strict";
+
+module.exports = {
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "ecmaFeatures": {
+      "impliedStrict": false
+    }
+  },
+  "plugins": [
+    "security"
+  ],
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:security/recommended"
+  ],
+  "globals": {
+    "Promise": true
+  },
+  "rules": {
+    "no-console": "off",
+    "array-callback-return": "error",
+    "block-scoped-var": "error",
+    "complexity": ["error", 10],
+    "consistent-return": "error",
+    "curly": ["error", "all"],
+    "default-case": "error",
+    "dot-notation": "error",
+    "dot-location": ["error", "property"],
+    "eqeqeq": "error",
+    "no-alert": "error",
+    "no-caller": "error",
+    "no-eq-null": "error",
+    "no-extra-bind": "warn",
+    "no-floating-decimal": "warn",
+    "no-implicit-coercion": "error",
+    "no-magic-numbers": ["error", {
+      "ignoreArrayIndexes": true,
+      "enforceConst": true,
+      "detectObjects": true
+    }],
+    "no-multi-spaces": ["error", {
+      "exceptions": {
+        "Property": true
+      }
+    }],
+    "no-new": "error",
+    "no-param-reassign": "error",
+    "no-return-assign": "error",
+    "no-cond-assign": ["error", "always"],
+    "no-self-compare": "error",
+    "no-sequences": "error",
+    "no-unmodified-loop-condition": "error",
+    "no-unused-expressions": "error",
+    "no-useless-call": "warn",
+    "no-useless-concat": "warn",
+    "no-useless-escape": "warn",
+    "prefer-promise-reject-errors": "error",
+    "require-await": "error",
+    "wrap-iife": "error",
+
+    "strict": ["error", "global"],
+
+    "init-declarations": ["error", "always"],
+    "no-catch-shadow": "error",
+    "no-shadow-restricted-names": "error",
+    "no-undef-init": "error",
+    "no-use-before-define": ["error", { "functions": false }],
+
+    "callback-return": "error",
+    "handle-callback-err": "error",
+    "no-mixed-requires": "error",
+    "no-new-require": "error",
+    "no-path-concat": "error",
+    "no-sync": "error",
+    "array-bracket-spacing": ["error", "always"],
+    "block-spacing": ["error", "always"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "camelcase": "error",
+    "comma-dangle": ["error", "never"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "comma-style": ["error", "last"],
+    "computed-property-spacing": ["error", "never"],
+    "consistent-this": ["error", "self"],
+    "eol-last": ["error", "always"],
+    "func-call-spacing": ["error", "never"],
+    "func-names": ["error", "always"],
+    "func-style": ["error", "declaration"],
+    "indent": ["error", 2, {
+      "FunctionDeclaration": {
+        "body": 1,
+        "parameters": "first"
+      },
+      "MemberExpression": 1,
+      "CallExpression": {
+        "arguments": "first"
+      },
+      "ArrayExpression": 1,
+      "ObjectExpression": 1
+    }],
+    "key-spacing": ["error", {
+      "align": "value",
+      "beforeColon": false,
+      "afterColon": true,
+      "mode": "strict"
+    }],
+    "keyword-spacing": "error",
+    "linebreak-style": ["error", "unix"],
+    "lines-around-comment": ["error", {
+      "beforeBlockComment": true,
+      "beforeLineComment": true,
+      "allowBlockStart": true,
+      "allowObjectStart": true,
+      "allowArrayStart": true
+    }],
+    "lines-around-directive": ["error", "always"],
+    "max-depth": ["error", 4],
+    "max-len": ["error", {
+      "code": 100,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true,
+      "ignoreComments": true,
+      "ignoreTrailingComments": true
+    }],
+    "max-lines": ["error", {
+      "max": 300,
+      "skipBlankLines": true,
+      "skipComments": true
+    }],
+    "max-nested-callbacks": ["error", 5],
+    "max-params": ["error", 5],
+    "max-statements-per-line": ["error", { "max": 1 }],
+    "new-cap": "error",
+    "new-parens": "error",
+    "newline-after-var": ["error", "always"],
+    "newline-before-return": "error",
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+    "no-lonely-if": "error",
+    "no-mixed-operators": "error",
+    "no-multi-assign": "error",
+    "no-multiple-empty-lines": ["error", {
+      "max": 2
+    }],
+    "no-tabs": "error",
+    "no-trailing-spaces": "error",
+    "no-underscore-dangle": "error",
+    "no-unneeded-ternary": "error",
+    "no-whitespace-before-property": "error",
+    "object-curly-spacing": ["error", "always"],
+    "object-property-newline": "error",
+    "one-var": ["error", "never"],
+    "operator-linebreak": ["error", "after"],
+    "padded-blocks": ["error", "never"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "semi-spacing": "error",
+    "space-before-blocks": "error",
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "space-in-parens": ["error", "never"],
+    "space-infix-ops": "error",
+    "space-unary-ops": "error",
+    "unicode-bom": ["error", "never"],
+
+    "arrow-spacing": "error",
+    "generator-star-spacing": "error",
+    "no-duplicate-imports": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-rename": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "symbol-description": "error",
+    "yield-star-spacing": "error",
+
+    "security/detect-unsafe-regex": "error",
+    "security/detect-buffer-noassert": "error",
+    "security/detect-child-process": "error",
+    "security/detect-disable-mustache-escape": "error",
+    "security/detect-eval-with-expression": "error",
+    "security/detect-no-csrf-before-method-override": "error",
+    "security/detect-non-literal-fs-filename": "error",
+    "security/detect-non-literal-regexp": "error",
+    "security/detect-non-literal-require": "error",
+    "security/detect-possible-timing-attacks": "error",
+    "security/detect-pseudoRandomBytes": "warn"
+  }
+};
