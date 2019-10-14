@@ -1,11 +1,12 @@
 {
     "name": "homework",
     "description": "home brewed app",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "test": "mocha --require ./test/auto/setup --bail test/auto/test.js"
+        "test": "mocha --require ./test/auto/setup --bail test/auto/test.js",
+        "release": "standard-version"
     },
     "files": [
         "index.js",
@@ -23,6 +24,7 @@
         "eslint": "^5.12.1",
         "eslint-plugin-security": "^1.4.0",
         "mocha": "^5.2.0",
+        "standard-version": "^7.0.0",
         "uuid": "^3.3.2"
     }
 }
