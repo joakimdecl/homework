@@ -1,7 +1,7 @@
 {
     "name": "homework",
     "description": "home brewed app",
-    "version": "2.0.0",
+    "version": "2.0.1-snapshot.0",
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
