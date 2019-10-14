@@ -2,13 +2,13 @@
 
 const express = require("express");
 
-function createRouter() {
-    const router = express.Router();
-    const homeworkRouter = require("./homework").createHomeworkRouter();
+function createRouter(config) {
+  const router = express.Router(); //eslint-disable-line
+  const moviesRouter = require("./movies").createMoviesRouter(config);
 
-    router.use("/homework", homeworkRouter);
+  router.use("/movies", moviesRouter);
 
-    return router;
+  return router;
 }
 
 module.exports = createRouter;
